@@ -1,4 +1,3 @@
-
 # 🎮 Game Chatbot - Your Interactive Gaming Companion
 
 A comprehensive Python chatbot designed to interact with users about video games, provide personalized game recommendations, share gaming tips, and engage in meaningful gaming conversations.
@@ -31,6 +30,8 @@ A comprehensive Python chatbot designed to interact with users about video games
 - **Easy Commands**: Simple commands for help, clearing screen, and exiting
 - **Demo Mode**: Interactive demonstration of chatbot capabilities
 
+---
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -40,63 +41,71 @@ A comprehensive Python chatbot designed to interact with users about video games
 ### Installation
 
 1. **Clone the Repository**:
-   ```bash
-   git clone (https://github.com/aryanraj45/refactored-guide.git)
-   cd refactored-guide
-````
 
-2.  **Run the Chatbot**:
-    ```bash
+    ```
+    git clone https://github.com/aryanraj45/refactored-guide.git
+    cd refactored-guide
+    ```
+
+2. **Run the Chatbot**:
+
+    ```
     python3 demo.py
     ```
+
+---
 
 ## 🎮 How to Use
 
 ### Basic Commands
 
-  - `help` - Show available commands and examples
-  - `clear` - Clear the screen
-  - `quit` or `exit` - End the conversation
+- `help` - Show available commands and examples
+- `clear` - Clear the screen
+- `quit` or `exit` - End the conversation
 
 ### Example Conversations & Screenshots
 
 Here's a look at the chatbot in action.
 
 #### Getting Game Recommendations
-You: Recommend me some action games for PC
-Bot: 🎮 Game Recommendations for You:
+
+You: Recommend me some action games for PC  
+Bot: 🎮 Game Recommendations for You:  
 ...
 
-**Screenshot:**
-![Chatbot Recommendation](./Screenshot/Recommendation.png)
+**Screenshot:**  
+![Chatbot Recommendation](Screenshot/Recommendation.png)
 
 #### Learning About Specific Games
-You: Tell me about Portal 2
-Bot: 🎮 Portal 2 (2011)
+
+You: Tell me about Portal 2  
+Bot: 🎮 Portal 2 (2011)  
 ...
 
-**Screenshot:**
-![Chatbot Game Info](./Screenshot/game-info.png)
+**Screenshot:**  
+![Chatbot Game Info](Screenshot/game-info.png)
 
 #### Getting a Gaming Tip
-You: Give me a gaming tip
-Bot: 💡 Gaming Tip:
+
+You: Give me a gaming tip  
+Bot: 💡 Gaming Tip:  
 ...
 
-**Screenshot:**
-![Chatbot Gaming Tip](./Screenshot/Tip.png)
+**Screenshot:**  
+![Chatbot Gaming Tip](Screenshot/Tip.png)
 
+---
 
 ## 🏗️ Project Structure
 
-```
 game-chatbot/
 │
-├── game_chatbot.py     # Main chatbot class with all functionality
-├── demo.py             # Interactive demo and CLI interface
-├── requirements.txt    # Project dependencies
-└── README.md           # This documentation
-```
+├── game_chatbot.py     # Main chatbot class
+├── demo.py             # CLI interface / demo runner
+├── requirements.txt    # Dependencies
+└── README.md           # Documentation
+
+---
 
 ## 📚 API Documentation
 
@@ -106,80 +115,86 @@ The main interaction with the chatbot is done through the `GameChatbot` class. H
 
 Initializes a new instance of the chatbot. It sets up the default user preferences, conversation history, and loads the game database.
 
-  - **Parameters:** None
-  - **Returns:** `None`
+- **Parameters:** None  
+- **Returns:** `None`
 
 ### `generate_response(user_input)`
 
 This is the main method for interacting with the chatbot. It takes a user's message, detects the intent, and returns the appropriate response.
 
-| Parameter    | Type  | Description                       |
-| :----------- | :---- | :-------------------------------- |
-| `user_input` | `str` | The text message from the user.   |
+| Parameter  | Type  | Description                    |
+|------------|--------|-------------------------------|
+| `user_input` | `str` | The text message from the user. |
 | **Returns** | `str` | A text response from the chatbot. |
 
 ### `get_conversation_summary()`
 
 Returns a brief summary of the current chat session.
 
-| Returns     | Type  | Description                                          |
-| :---------- | :---- | :--------------------------------------------------- |
+| Returns    | Type  | Description                             |
+|------------|--------|---------------------------------------|
 | **Returns** | `str` | A summary string detailing the number of messages. |
+
+---
 
 ## 🧠 Technical Features
 
 ### Architecture
 
-  - **Object-Oriented Design**: Clean, modular code structure
-  - **Intent Detection**: Pattern matching for understanding user requests
-  - **Preference Extraction**: Automatic extraction of gaming preferences from natural language
-  - **Recommendation Engine**: Smart filtering and ranking system
+- **Object-Oriented Design**: Clean, modular code structure
+- **Intent Detection**: Pattern matching for understanding user requests
+- **Preference Extraction**: Automatic extraction of gaming preferences from natural language
+- **Recommendation Engine**: Smart filtering and ranking system
 
 ### Supported Categories
 
 #### Game Genres
 
-  - **Action**: The Witcher 3, Red Dead Redemption 2, Cyberpunk 2077
-  - **Adventure**: Zelda: Breath of the Wild, Uncharted 4
-  - **Strategy**: Civilization VI, Total War: Warhammer III
-  - **Puzzle**: Portal 2, The Witness
-  - **Racing**: Forza Horizon 5, Gran Turismo 7
-  - **Indie**: Hades, Celeste
+- **Action**: The Witcher 3, Red Dead Redemption 2, Cyberpunk 2077  
+- **Adventure**: Zelda: Breath of the Wild, Uncharted 4  
+- **Strategy**: Civilization VI, Total War: Warhammer III  
+- **Puzzle**: Portal 2, The Witness  
+- **Racing**: Forza Horizon 5, Gran Turismo 7  
+- **Indie**: Hades, Celeste
 
 #### Gaming Platforms
 
-  - PC (Windows, Mac, Linux)
-  - PlayStation (PS4, PS5)
-  - Xbox (Xbox One, Series X/S)
-  - Nintendo Switch
-  - Mobile (iOS, Android)
+- PC (Windows, Mac, Linux)  
+- PlayStation (PS4, PS5)  
+- Xbox (Xbox One, Series X/S)  
+- Nintendo Switch  
+- Mobile (iOS, Android)
 
 #### Playtime Categories
 
-  - **Short**: Under 10 hours
-  - **Medium**: 10-40 hours
-  - **Long**: 40+ hours
+- **Short**: Under 10 hours  
+- **Medium**: 10-40 hours  
+- **Long**: 40+ hours
+
+---
 
 ## 🎯 Use Cases
 
 ### For Gamers
 
-  - **Discover New Games**: Find games matching your exact preferences
-  - **Platform-Specific Recommendations**: Get games for your console or PC
-  - **Time-Based Gaming**: Find games that fit your available time
-  - **Learn About Games**: Get detailed information before purchasing
+- **Discover New Games**: Find games matching your exact preferences  
+- **Platform-Specific Recommendations**: Get games for your console or PC  
+- **Time-Based Gaming**: Find games that fit your available time  
+- **Learn About Games**: Get detailed information before purchasing
 
 ### For Game Enthusiasts
 
-  - **Gaming Knowledge**: Learn interesting facts about the gaming industry
-  - **Tips and Tricks**: Improve your gaming experience
-  - **Reviews**: Get honest opinions about popular games
+- **Gaming Knowledge**: Learn interesting facts about the gaming industry  
+- **Tips and Tricks**: Improve your gaming experience  
+- **Reviews**: Get honest opinions about popular games
 
 ### For Developers and Researchers
 
-  - **NLP Example**: Study natural language processing in gaming context
-  - **Chatbot Architecture**: Learn about intent detection and response generation
-  - **Recommendation Systems**: Understand preference-based filtering
+- **NLP Example**: Study natural language processing in gaming context  
+- **Chatbot Architecture**: Learn about intent detection and response generation  
+- **Recommendation Systems**: Understand preference-based filtering
+
+---
 
 ## 🔧 Customization
 
@@ -187,66 +202,61 @@ Returns a brief summary of the current chat session.
 
 Edit the `games_db` dictionary in `game_chatbot.py`:
 
-```python
 'your_genre': [
-    {
-        'name': 'Game Name',
-        'platform': ['PC', 'PlayStation'],
-        'rating': 8.5,
-        'year': 2023,
-        'playtime': 'medium',
-        'description': 'Game description',
-        'features': ['feature1', 'feature2']
-    }
+{
+'name': 'Game Name',
+'platform': ['PC', 'PlayStation'],
+'rating': 8.5,
+'year': 2023,
+'playtime': 'medium',
+'description': 'Game description',
+'features': ['feature1', 'feature2']
+}
 ]
-```
+
 
 ### Adding New Tips or Facts
 
 Add to the `gaming_tips` or `gaming_facts` lists:
 
-```python
-self.gaming_tips.append("Your new gaming tip here!")
-self.gaming_facts.append("Your interesting gaming fact here!")
-```
 
 ### Extending Intent Recognition
 
 Modify the `detect_intent` method to recognize new conversation patterns:
 
-```python
-elif any(word in user_input for word in ['your', 'keywords']):
-    return 'your_new_intent'
-```
+
+---
 
 ## 🚧 Future Enhancements
 
 ### Planned Features
 
-  - **External Game APIs**: Integration with Steam, IGDB, or other game databases
-  - **User Profiles**: Persistent user preferences and gaming history
-  - **Advanced NLP**: More sophisticated natural language understanding
-  - **Web Interface**: Browser-based chat interface
-  - **Voice Integration**: Speech-to-text and text-to-speech capabilities
-  - **Game Reviews Scraping**: Real-time review data from gaming websites
-  - **Social Features**: Game recommendations based on friends' preferences
+- **External Game APIs**: Integration with Steam, IGDB, or other game databases  
+- **User Profiles**: Persistent user preferences and gaming history  
+- **Advanced NLP**: More sophisticated natural language understanding  
+- **Web Interface**: Browser-based chat interface  
+- **Voice Integration**: Speech-to-text and text-to-speech capabilities  
+- **Game Reviews Scraping**: Real-time review data from gaming websites  
+- **Social Features**: Game recommendations based on friends' preferences
 
 ### Technical Improvements
 
-  - **Database Integration**: SQLite or PostgreSQL for game data
-  - **Machine Learning**: ML-based recommendation algorithms
-  - **API Development**: REST API for integration with other applications
-  - **Testing Suite**: Comprehensive unit and integration tests
-  - **Configuration File**: YAML/JSON configuration for easy customization
+- **Database Integration**: SQLite or PostgreSQL for game data  
+- **Machine Learning**: ML-based recommendation algorithms  
+- **API Development**: REST API for integration with other applications  
+- **Testing Suite**: Comprehensive unit and integration tests  
+- **Configuration File**: YAML/JSON configuration for easy customization
+
+---
 
 ## 🤝 Contributing
 
 ### How to Contribute
 
-1.  **Fork the Repository**: Create your own copy of the project
-2.  **Add Features**: Implement new games, improve algorithms, or enhance UI
-3.  **Submit Issues**: Report bugs or suggest improvements
-4.  **Documentation**: Help improve documentation and examples
+1. **Fork the Repository**: Create your own copy of the project  
+2. **Add Features**: Implement new games, improve algorithms, or enhance UI  
+3. **Submit Issues**: Report bugs or suggest improvements  
+4. **Documentation**: Help improve documentation and examples
 
 ### Development Setup
 
@@ -266,25 +276,26 @@ pip install -r requirements.txt
 python -m pytest
 ```
 
+---
+
 ## 📄 License
 
 This project is open source and available under the MIT License.
 
+---
+
 ## 🙏 Acknowledgments
 
-  - **Game Data**: Curated from popular gaming websites and databases
-  - **Python Community**: For excellent documentation and libraries
-  - **Gaming Community**: For inspiration and feedback
+- **Game Data**: Curated from popular gaming websites and databases  
+- **Python Community**: For excellent documentation and libraries  
+- **Gaming Community**: For inspiration and feedback
+
+---
 
 ## 📞 Support
 
 If you encounter issues or have questions:
 
-1.  Check the documentation above
-2.  Try the demo mode to see expected behavior
-3.  Create an issue in the project repository
-
------
-
-```
-```
+1. Check the documentation above  
+2. Try the demo mode to see expected behavior  
+3. Create an issue in the project repository
