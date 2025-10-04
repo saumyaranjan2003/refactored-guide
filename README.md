@@ -299,4 +299,5 @@ Here are some ideas/issues for contributors:
 14. Integrate game news and updates from APIs
 15. Improve documentation with screenshots and API docs
 
+
 Check the Issues tab for more details or open your own ideas!
