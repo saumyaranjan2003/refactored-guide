@@ -73,10 +73,12 @@ A comprehensive Python chatbot designed to interact with users about video games
 ### Installation and Requirements
 
 Add the following dependencies to your environment to enable voice features:
+```
 pip install SpeechRecognition pyttsx3 PyAudio
 
 Or install all requirements including voice support from:
 pip install -r requirements.txt
+```
 
 ### Notes
 
@@ -282,4 +284,5 @@ If you encounter issues or have questions:
 3. Create an issue in the project repository
 
 ---
+
 
