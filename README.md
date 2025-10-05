@@ -35,6 +35,8 @@ A comprehensive Python chatbot designed to interact with users about video games
 - **Easy Commands**: Simple commands for help, clearing screen, and exiting
 - **Demo Mode**: Interactive demonstration of chatbot capabilities
 
+---
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -54,9 +56,6 @@ A comprehensive Python chatbot designed to interact with users about video games
    ```
 
 2. **Run the Chatbot**:
-   ```bash
-   python demo.py
-   ```
 
 #### Method 2: Docker Installation
 
@@ -133,7 +132,9 @@ docker logs <container-name>
 - `clear` - Clear the screen
 - `quit` or `exit` - End the conversation
 
-### Example Conversations
+### Example Conversations & Screenshots
+
+Here's a look at the chatbot in action.
 
 #### Getting Game Recommendations
 
@@ -155,14 +156,12 @@ Bot: 🎮 Game Recommendations for You:
 You: Tell me about Portal 2
 Bot: 🎮 Portal 2 (2011)
 
-📱 Platforms: PC, PlayStation, Xbox
-⭐ Rating: 9.5/10
-🎭 Genre: Puzzle
-⏱️ Playtime: Short
-🏷️ Features: puzzle-solving, physics-based, co-op
+You: Tell me about Portal 2  
+Bot: 🎮 Portal 2 (2011)  
+...
 
-📝 Description: Mind-bending puzzle game with clever mechanics
-```
+**Screenshot:**  
+![Chatbot Game Info](Screenshot/game-info.png)
 
 #### Getting Gaming Tips
 
@@ -171,12 +170,17 @@ You: Give me a gaming tip
 Bot: 💡 Gaming Tip:
 Always save your game progress frequently to avoid losing hours of gameplay!
 
-Would you like another tip or need advice about a specific gaming topic? 🎮
-```
+You: Give me a gaming tip  
+Bot: 💡 Gaming Tip:  
+...
+
+**Screenshot:**  
+![Chatbot Gaming Tip](Screenshot/Tip.png)
+
+---
 
 ## 🏗️ Project Structure
 
-```
 game-chatbot/
 │
 ├── game_chatbot.py     # Main chatbot class with all functionality
@@ -221,6 +225,8 @@ game-chatbot/
 - **Medium**: 10-40 hours
 - **Long**: 40+ hours
 
+---
+
 ## 🎯 Use Cases
 
 ### For Gamers
@@ -242,43 +248,38 @@ game-chatbot/
 - **Chatbot Architecture**: Learn about intent detection and response generation
 - **Recommendation Systems**: Understand preference-based filtering
 
+---
+
 ## 🔧 Customization
 
 ### Adding New Games
 
 Edit the `games_db` dictionary in `game_chatbot.py`:
 
-```python
 'your_genre': [
-    {
-        'name': 'Game Name',
-        'platform': ['PC', 'PlayStation'],
-        'rating': 8.5,
-        'year': 2023,
-        'playtime': 'medium',
-        'description': 'Game description',
-        'features': ['feature1', 'feature2']
-    }
+{
+'name': 'Game Name',
+'platform': ['PC', 'PlayStation'],
+'rating': 8.5,
+'year': 2023,
+'playtime': 'medium',
+'description': 'Game description',
+'features': ['feature1', 'feature2']
+}
 ]
-```
+
 
 ### Adding New Tips or Facts
 
 Add to the `gaming_tips` or `gaming_facts` lists:
 
-```python
-self.gaming_tips.append("Your new gaming tip here!")
-self.gaming_facts.append("Your interesting gaming fact here!")
-```
 
 ### Extending Intent Recognition
 
 Modify the `detect_intent` method to recognize new conversation patterns:
 
-```python
-elif any(word in user_input for word in ['your', 'keywords']):
-    return 'your_new_intent'
-```
+
+---
 
 ## 🚧 Future Enhancements
 
@@ -299,6 +300,8 @@ elif any(word in user_input for word in ['your', 'keywords']):
 - **API Development**: REST API for integration with other applications
 - **Testing Suite**: Comprehensive unit and integration tests
 - **Configuration File**: YAML/JSON configuration for easy customization
+
+---
 
 ## 🤝 Contributing
 
@@ -327,15 +330,21 @@ pip install -r requirements.txt
 python -m pytest
 ```
 
+---
+
 ## 📄 License
 
 This project is open source and available under the MIT License.
 
+---
+
 ## 🙏 Acknowledgments
 
-- **Game Data**: Curated from popular gaming websites and databases
-- **Python Community**: For excellent documentation and libraries
+- **Game Data**: Curated from popular gaming websites and databases  
+- **Python Community**: For excellent documentation and libraries  
 - **Gaming Community**: For inspiration and feedback
+
+---
 
 ## 📞 Support
 

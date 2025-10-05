@@ -54,4 +54,8 @@ Thank you for your interest in contributing to this project! Your help is welcom
 - Open an issue for questions or suggestions.
 - Check the README for more information.
 
+## Claim Badges 
+- Contributing to Game Chatbot
+- fix issue properly 
+
 Happy contributing! 🎉
