@@ -40,7 +40,7 @@ def main(page: ft.Page):
     • 'What games can I play on Switch?'
     \n 🎮 Supported Genres:
     Action, Adventure, Strategy, Puzzle, Racing, Indie
-    \n 📱 Supported Platforms:
+    \n 🎮 Supported Platforms:
     PC, PlayStation, Xbox, Nintendo Switch, Mobile"""
 
     #Function to change theme mode
