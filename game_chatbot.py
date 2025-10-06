@@ -440,7 +440,7 @@ class GameChatbot:
     def handle_tips(self) -> str:
         """Handle gaming tips requests"""
         tip = random.choice(self.gaming_tips)
-        response = f"💡 Gaming Tip:\n{tip}\n\n"
+        response = f"📚 Gaming Tip:\n{tip}\n\n"
         response += "Would you like another tip or need advice about a specific gaming topic? 🎮"
         return response
     
