@@ -367,11 +367,11 @@ class GameChatbot:
         
         for i, game in enumerate(recommendations, 1):
             response += f"{i}. {game['name']} ({game['year']})\n"
-            response += f"   📱 Platforms: {', '.join(game['platform'])}\n"
+            response += f"   🎮 Platforms: {', '.join(game['platform'])}\n"
             response += f"   ⭐ Rating: {game['rating']}/10\n"
             response += f"   🎭 Genre: {game['genre'].title()}\n"
             response += f"   ⏱️ Playtime: {game['playtime'].title()}\n"
-            response += f"   📝 {game['description']}\n\n"
+            response += f"   🎮 {game['description']}\n\n"
         
         response += "Would you like more details about any of these games or different recommendations? 🎮"
         return response
@@ -392,12 +392,12 @@ class GameChatbot:
         if potential_game_names:
             game, genre = potential_game_names[0]  # Take the first match
             response = f"🎮 {game['name']} ({game['year']})\n\n"
-            response += f"📱 Platforms: {', '.join(game['platform'])}\n"
+            response += f"🎮 Platforms: {', '.join(game['platform'])}\n"
             response += f"⭐ Rating: {game['rating']}/10\n"
             response += f"🎭 Genre: {genre.title()}\n"
             response += f"⏱️ Playtime: {game['playtime'].title()}\n"
             response += f"🏷️ Features: {', '.join(game['features'])}\n\n"
-            response += f"📝 Description: {game['description']}\n\n"
+            response += f"🎮 Description: {game['description']}\n\n"
             response += "Would you like recommendations for similar games? 🎮"
             return response
         else:
@@ -429,7 +429,7 @@ class GameChatbot:
                 for i, game in enumerate(games, 1):
                     response += f"{i}. {game['name']} ({game['year']})\n"
                     response += f"   ⭐ Rating: {game['rating']}/10\n"
-                    response += f"   📝 {game['description']}\n\n"
+                    response += f"   🎮 {game['description']}\n\n"
                 
                 response += f"{genre.title()} games offer amazing experiences! Want to know more about any specific game? 🎮"
                 return response
@@ -440,14 +440,14 @@ class GameChatbot:
     def handle_tips(self) -> str:
         """Handle gaming tips requests"""
         tip = random.choice(self.gaming_tips)
-        response = f"📚 Gaming Tip:\n{tip}\n\n"
+        response = f"🎮 Gaming Tip:\n{tip}\n\n"
         response += "Would you like another tip or need advice about a specific gaming topic? 🎮"
         return response
     
     def handle_facts(self) -> str:
         """Handle gaming facts requests"""
         fact = random.choice(self.gaming_facts)
-        response = f"🤓 Gaming Fact:\n{fact}\n\n"
+        response = f"🎮 Gaming Fact:\n{fact}\n\n"
         response += "Want to hear another interesting gaming fact? 🎮"
         return response
     
@@ -469,7 +469,7 @@ class GameChatbot:
             
             response += f"\n📝 Description: {game['description']}\n"
             response += f"🎭 Genre: {game['genre'].title()}\n"
-            response += f"📱 Platforms: {', '.join(game['platform'])}\n\n"
+            response += f"🎮 Platforms: {', '.join(game['platform'])}\n\n"
             response += "Would you like recommendations for similar games? 🎮"
             return response
         else:
