@@ -363,15 +363,15 @@ class GameChatbot:
         if not recommendations:
             return "I couldn't find games matching your exact preferences, but let me suggest some popular games across different genres!"
         
-        response = "🎮 **Game Recommendations for You:**\n\n"
+        response = "🎮 Game Recommendations for You:\n\n"
         
         for i, game in enumerate(recommendations, 1):
-            response += f"{i}. **{game['name']}** ({game['year']})\n"
-            response += f"   📱 Platforms: {', '.join(game['platform'])}\n"
+            response += f"{i}. {game['name']} ({game['year']})\n"
+            response += f"   🎮 Platforms: {', '.join(game['platform'])}\n"
             response += f"   ⭐ Rating: {game['rating']}/10\n"
             response += f"   🎭 Genre: {game['genre'].title()}\n"
             response += f"   ⏱️ Playtime: {game['playtime'].title()}\n"
-            response += f"   📝 {game['description']}\n\n"
+            response += f"   🎮 {game['description']}\n\n"
         
         response += "Would you like more details about any of these games or different recommendations? 🎮"
         return response
@@ -391,13 +391,13 @@ class GameChatbot:
         
         if potential_game_names:
             game, genre = potential_game_names[0]  # Take the first match
-            response = f"🎮 **{game['name']}** ({game['year']})\n\n"
-            response += f"📱 **Platforms:** {', '.join(game['platform'])}\n"
-            response += f"⭐ **Rating:** {game['rating']}/10\n"
-            response += f"🎭 **Genre:** {genre.title()}\n"
-            response += f"⏱️ **Playtime:** {game['playtime'].title()}\n"
-            response += f"🏷️ **Features:** {', '.join(game['features'])}\n\n"
-            response += f"📝 **Description:** {game['description']}\n\n"
+            response = f"🎮 {game['name']} ({game['year']})\n\n"
+            response += f"🎮 Platforms: {', '.join(game['platform'])}\n"
+            response += f"⭐ Rating: {game['rating']}/10\n"
+            response += f"🎭 Genre: {genre.title()}\n"
+            response += f"⏱️ Playtime: {game['playtime'].title()}\n"
+            response += f"🏷️ Features: {', '.join(game['features'])}\n\n"
+            response += f"🎮 Description: {game['description']}\n\n"
             response += "Would you like recommendations for similar games? 🎮"
             return response
         else:
@@ -409,9 +409,9 @@ class GameChatbot:
             platform = preferences['platforms'][0]
             games = self.get_game_recommendations({'platforms': [platform]}, count=5)
             
-            response = f"🎮 **Great {platform} Games:**\n\n"
+            response = f"🎮 Great {platform} Games:\n\n"
             for i, game in enumerate(games, 1):
-                response += f"{i}. **{game['name']}** - {game['description'][:50]}... (Rating: {game['rating']}/10)\n"
+                response += f"{i}. {game['name']} - {game['description'][:50]}... (Rating: {game['rating']}/10)\n"
             
             response += f"\n{platform} is an excellent gaming platform! Would you like detailed info about any of these games? 🎮"
             return response
@@ -424,12 +424,12 @@ class GameChatbot:
             genre = preferences['genres'][0]
             if genre in self.games_db:
                 games = self.games_db[genre]
-                response = f"🎮 **{genre.title()} Games You'll Love:**\n\n"
+                response = f"🎮 {genre.title()} Games You'll Love:\n\n"
                 
                 for i, game in enumerate(games, 1):
-                    response += f"{i}. **{game['name']}** ({game['year']})\n"
+                    response += f"{i}. {game['name']} ({game['year']})\n"
                     response += f"   ⭐ Rating: {game['rating']}/10\n"
-                    response += f"   📝 {game['description']}\n\n"
+                    response += f"   🎮 {game['description']}\n\n"
                 
                 response += f"{genre.title()} games offer amazing experiences! Want to know more about any specific game? 🎮"
                 return response
@@ -440,14 +440,14 @@ class GameChatbot:
     def handle_tips(self) -> str:
         """Handle gaming tips requests"""
         tip = random.choice(self.gaming_tips)
-        response = f"💡 **Gaming Tip:**\n{tip}\n\n"
+        response = f"🎮 Gaming Tip:\n{tip}\n\n"
         response += "Would you like another tip or need advice about a specific gaming topic? 🎮"
         return response
     
     def handle_facts(self) -> str:
         """Handle gaming facts requests"""
         fact = random.choice(self.gaming_facts)
-        response = f"🤓 **Gaming Fact:**\n{fact}\n\n"
+        response = f"🎮 Gaming Fact:\n{fact}\n\n"
         response += "Want to hear another interesting gaming fact? 🎮"
         return response
     
@@ -455,21 +455,21 @@ class GameChatbot:
         """Handle game review requests"""
         game = self.find_game_by_name(user_input)
         if game:
-            response = f"🎮 **{game['name']} Review:**\n\n"
-            response += f"⭐ **Overall Rating:** {game['rating']}/10\n\n"
+            response = f"🎮 {game['name']} Review:\n\n"
+            response += f"⭐ Overall Rating: {game['rating']}/10\n\n"
             
             if game['rating'] >= 9.0:
-                response += "🏆 **Verdict:** Masterpiece! This game is absolutely phenomenal and a must-play for any gamer.\n"
+                response += "🏆 Verdict: Masterpiece! This game is absolutely phenomenal and a must-play for any gamer.\n"
             elif game['rating'] >= 8.0:
-                response += "👍 **Verdict:** Excellent game! Highly recommended with great gameplay and features.\n"
+                response += "👍 Verdict: Excellent game! Highly recommended with great gameplay and features.\n"
             elif game['rating'] >= 7.0:
-                response += "✅ **Verdict:** Good game worth playing, with some minor flaws but overall enjoyable.\n"
+                response += "✅ Verdict: Good game worth playing, with some minor flaws but overall enjoyable.\n"
             else:
-                response += "⚠️ **Verdict:** Average game. Might be worth trying if you're interested in the genre.\n"
+                response += "⚠️ Verdict: Average game. Might be worth trying if you're interested in the genre.\n"
             
-            response += f"\n📝 **Description:** {game['description']}\n"
-            response += f"🎭 **Genre:** {game['genre'].title()}\n"
-            response += f"📱 **Platforms:** {', '.join(game['platform'])}\n\n"
+            response += f"\n📝 Description: {game['description']}\n"
+            response += f"🎭 Genre: {game['genre'].title()}\n"
+            response += f"🎮 Platforms: {', '.join(game['platform'])}\n\n"
             response += "Would you like recommendations for similar games? 🎮"
             return response
         else:

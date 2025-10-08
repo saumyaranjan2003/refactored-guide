@@ -1,6 +1,8 @@
 # Game Chatbot Requirements
 # No external dependencies required - uses only Python standard library
 
+# Game Chatbot UI Requirements
+flet
 # Optional: For enhanced terminal colors (if needed)
 # colorama>=0.4.4
 
