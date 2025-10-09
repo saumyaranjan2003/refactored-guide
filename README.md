@@ -78,6 +78,16 @@ A comprehensive Python chatbot designed to interact with users about video games
    - Option 2: Demo Mode
    - Option 3: Exit
 
+## 📰 Game News and Updates
+
+Stay up-to-date with the latest happenings in the gaming world:
+
+- **Cyberpunk 2077**: New patch 2.1 released with bug fixes and performance improvements
+- **The Witcher 3: Wild Hunt**: Next-gen update launched for PS5 and Xbox Series X/S
+- **Hades**: New expansion "Labyrinth of Elysium" added
+- **Zelda: Breath of the Wild 2**: Release date confirmed for 2025
+- **Forza Horizon 5**: Winter DLC released with new cars and tracks
+
 ## 🐳 Docker Deployment
 
 ### Using Docker
