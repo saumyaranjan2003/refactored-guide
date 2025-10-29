@@ -1,8 +1,10 @@
 # Game Chatbot Requirements
 # No external dependencies required - uses only Python standard library
 
+
 # Optional: For enhanced terminal colors (if needed)
 # colorama>=0.4.4
+
 
 # For future enhancements (uncomment if needed):
 # requests>=2.28.0  # For fetching game data from APIs
@@ -10,8 +12,14 @@
 # pandas>=1.5.0     # For advanced data analysis
 # beautifulsoup4>=4.11.0  # For web scraping game reviews
 
+
 # Development dependencies (uncomment for development)
 # pytest>=7.0.0
 # black>=22.0.0
 # flake8>=5.0.0
 # mypy>=0.991
+
+# Voice input/output dependencies:
+SpeechRecognition>=3.8.1
+pyttsx3>=2.90
+PyAudio>=0.2.14

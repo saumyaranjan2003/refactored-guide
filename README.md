@@ -124,7 +124,38 @@ docker ps -a
 docker logs <container-name>
 ```
 
-## 🎮 How to Use
+## 🎤 Voice Input and Output Feature
+
+### What’s New?
+
+- **Voice Input**: Speak directly to the chatbot instead of typing. The chatbot listens and recognizes your speech automatically.
+- **Text-to-Speech**: The chatbot reads out its responses, making the conversation more interactive and hands-free.
+- **Seamless Interaction**: Just speak your message when prompted or press Enter to type instead—no manual mode toggling needed.
+
+### How to Use Voice Features
+
+- When chatting, the program prompts:  
+  _"Speak something now (You have up to 2 minutes):"_  
+  Simply start speaking clearly, or press Enter to type your message.
+- The chatbot will reply with both printed text and voice.
+- Existing commands (`help`, `clear`, `quit`) work as before.
+
+### Installation and Requirements
+
+Add the following dependencies to your environment to enable voice features:
+```
+pip install SpeechRecognition pyttsx3 PyAudio
+```
+Or install all requirements including voice support from:
+```
+pip install -r requirements.txt
+```
+
+### Notes
+
+- Ensure your microphone is accessible and permissions are granted (especially on macOS).
+- Voice recognition listens for up to 2 minutes per input.
+- If speech is not detected or understood, you will be prompted to type instead.
 
 ### Basic Commands
 
