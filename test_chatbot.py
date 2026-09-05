@@ -72,3 +72,22 @@ def test_chatbot():
 
 if __name__ == "__main__":
     test_chatbot()
+
+def test_ml_recommendations_respect_preferences():
+    bot = GameChatbot()
+
+    recommendations = bot.get_game_recommendations(
+        {
+            "genres": ["action"],
+            "platforms": ["PC"],
+            "playtime": "long",
+        },
+        count=3,
+    )
+
+    assert len(recommendations) == 3
+
+    for game in recommendations:
+        assert game["genre"] == "action"
+        assert "PC" in game["platform"]
+        assert game["playtime"] == "long"
